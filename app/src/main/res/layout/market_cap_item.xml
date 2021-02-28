@@ -18,61 +18,50 @@
 
             <TextView
                 android:id="@+id/mciBtc"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                style="@style/TextItemView"
                 tools:text="BTC"/>
             <TextView
                 android:id="@+id/mciEth"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                style="@style/TextItemView"
                 tools:text="ETH"/>
             <TextView
                 android:id="@+id/mciAda"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                style="@style/TextItemView"
                 tools:text="ADA"/>
             <TextView
                 android:id="@+id/mciBnb"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                style="@style/TextItemView"
                 tools:text="BNB"/>
 
             <TextView
                 android:id="@+id/mciUsdt"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                style="@style/TextItemView"
                 tools:text="USDT"/>
 
             <TextView
                 android:id="@+id/mciDot"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                style="@style/TextItemView"
                 tools:text="DOT"/>
 
             <TextView
                 android:id="@+id/mciXrp"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                style="@style/TextItemView"
                 tools:text="XRP"/>
 
             <TextView
                 android:id="@+id/mciLtc"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                style="@style/TextItemView"
                 tools:text="LTC"/>
 
             <TextView
                 android:id="@+id/mciLink"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                style="@style/TextItemView"
                 tools:text="LINK"/>
 
             <TextView
-                android:id="@+id/mciBch"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                tools:text="BCH"/>
-
+                android:id="@+id/mciXlm"
+                style="@style/TextItemView"
+                tools:text="XLM"/>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </LinearLayout>

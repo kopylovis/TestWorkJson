@@ -11,7 +11,7 @@ import com.example.testworkjson.R;
 public class MarketCapViewHolder extends RecyclerView.ViewHolder {
 
 
-    TextView btc, eth, ada, bnb, usdt, dot, xrp, ltc, link, bch;
+    TextView btc, eth, ada, bnb, usdt, dot, xrp, ltc, link, xlm;
 
     public MarketCapViewHolder(@NonNull View itemView) {
         super(itemView);
@@ -24,6 +24,6 @@ public class MarketCapViewHolder extends RecyclerView.ViewHolder {
         xrp = itemView.findViewById(R.id.mciXrp);
         ltc = itemView.findViewById(R.id.mciLtc);
         link = itemView.findViewById(R.id.mciLink);
-        bch = itemView.findViewById(R.id.mciBch);
+        xlm = itemView.findViewById(R.id.mciXlm);
     }
 }
