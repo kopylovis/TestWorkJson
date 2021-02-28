@@ -1,10 +1,19 @@
 package com.example.testworkjson.models;
 
+import androidx.annotation.NonNull;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.util.List;
+
+@Entity
 public class MarketCapPercentage {
 
+    @PrimaryKey
+    @NonNull
     @SerializedName("btc")
     @Expose
     private Double btc;
@@ -32,9 +41,9 @@ public class MarketCapPercentage {
     @SerializedName("link")
     @Expose
     private Double link;
-    @SerializedName("bch")
+    @SerializedName("xlm")
     @Expose
-    private Double bch;
+    private Double xlm;
 
 
     public Double getBtc() {
@@ -109,11 +118,11 @@ public class MarketCapPercentage {
         this.link = link;
     }
 
-    public Double getBch() {
-        return bch;
+    public Double getXlm() {
+        return xlm;
     }
 
-    public void setBch(Double bch) {
-        this.bch = bch;
+    public void setXlm(Double bch) {
+        this.xlm = bch;
     }
 }
