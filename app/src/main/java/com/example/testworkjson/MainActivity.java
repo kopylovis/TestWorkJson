@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     MarketCapAdapter adapter;
     Button parseButton, showButton;
     TextView btc, eth, ada;
+    Boolean isDataNotParsed = true;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,18 +43,24 @@ public class MainActivity extends AppCompatActivity {
 
         parseButton.setOnClickListener((View v) -> {
             retrofitAdapter.RetrofitGet();
+            isDataNotParsed = false;
             Toast.makeText(this, "Parse done", Toast.LENGTH_SHORT).show();
         });
         showButton.setOnClickListener((View v) -> {
-            MarketCapPercentageDataBase db = App.getInstance().getDataBase();
-            MarketCapPercentageDao marketCapPercentageDao = db.marketCapPercentageDao();
-            marketCapPercentageDao.getAllMarketCapPercentage();
-            List<MarketCapPercentage> list = new ArrayList<>();
-            list.add(marketCapPercentageDao.getAllMarketCapPercentage());
-            list.size();
-            adapter = new MarketCapAdapter(getApplicationContext(), list);
-            recyclerView.setAdapter(adapter);
-            Toast.makeText(this, "Show", Toast.LENGTH_SHORT).show();
+            if (isDataNotParsed) {
+                Toast.makeText(this, "U should parse data first", Toast.LENGTH_SHORT)
+                        .show();
+            }
+            else {
+                MarketCapPercentageDataBase db = App.getInstance().getDataBase();
+                MarketCapPercentageDao marketCapPercentageDao = db.marketCapPercentageDao();
+                marketCapPercentageDao.getAllMarketCapPercentage();
+                List<MarketCapPercentage> list = new ArrayList<>();
+                list.add(marketCapPercentageDao.getAllMarketCapPercentage());
+                adapter = new MarketCapAdapter(getApplicationContext(), list);
+                recyclerView.setAdapter(adapter);
+                Toast.makeText(this, "Show", Toast.LENGTH_SHORT).show();
+            }
         });
     }
 }
